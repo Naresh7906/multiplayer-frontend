@@ -4,4 +4,4 @@ dist
 .vscode
 exampleDist
 .idea
-*env
+.env*
