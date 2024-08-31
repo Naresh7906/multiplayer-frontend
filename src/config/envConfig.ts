@@ -1,3 +1,3 @@
 export const envConfig = {
-    MULTIPLAYER_URL : "http://localhost:2567",
+    MULTIPLAYER_URL : process.env.VITE_MULTIPLAYER_URL,
 }
