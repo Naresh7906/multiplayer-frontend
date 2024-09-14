@@ -1,3 +1,3 @@
 export const envConfig = {
-    MULTIPLAYER_URL : process.env.VITE_MULTIPLAYER_URL,
+    MULTIPLAYER_URL : import.meta.env.VITE_MULTIPLAYER_URL,
 }

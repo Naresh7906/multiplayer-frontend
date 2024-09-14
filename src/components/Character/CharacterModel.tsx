@@ -10,12 +10,12 @@ import { Suspense, useEffect, useRef, useMemo, useState } from "react";
 import * as THREE from "three";
 import { BallCollider, RapierCollider, vec3 } from "@react-three/rapier";
 import { useFrame } from "@react-three/fiber";
-import type { GLTF } from "three/examples/jsm/loaders/GLTFLoader";
 import { useGame } from "ecctrl";
 import type { Room } from "colyseus.js";
+import { GLTF } from "three/examples/jsm/Addons.js";
 
 interface CharacterModelProps2 extends CharacterModelProps {
-  room: Room;
+  room: Room | null;
 }
 
 export default function CharacterModel(props: CharacterModelProps2) {
@@ -265,7 +265,7 @@ export default function CharacterModel(props: CharacterModelProps2) {
       <mesh ref={leftHandRef} />
       <BallCollider args={[0.1]} ref={leftHandColliderRef} />
       {/* Character model */}
-      <group ref={group} {...props} dispose={null}>
+      <group ref={group} {...props} dispose={null} name="CharacterModel">
         <group name="Scene" scale={0.8} position={[0, -0.6, 0]}>
           <group name="KayKit_Animated_Character">
             <skinnedMesh

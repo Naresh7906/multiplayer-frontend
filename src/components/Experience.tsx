@@ -15,9 +15,10 @@ import { useControls } from "leva";
 import CharacterModel from "./Character/CharacterModel";
 import React, { useEffect, useState } from "react";
 import { Room } from "colyseus.js";
+import { RemotePlayerHandler } from "./Character/RemoteCharacter/RemotePlayerHandler";
 
 interface ExperienceProps {
-  room : Room
+  room : Room | null
 }
 
 export default function Experience(props : ExperienceProps) {
@@ -92,6 +93,7 @@ export default function Experience(props : ExperienceProps) {
             {/* Replace your model here */}
             <CharacterModel room={props.room}/>
           </Ecctrl>
+          <RemotePlayerHandler room={props.room}/>
         </KeyboardControls>
 
         {/* Rough plan */}

@@ -4,6 +4,7 @@ import { Suspense, useEffect, useState } from "react";
 import Experience from "./components/Experience";
 import { Room } from "colyseus.js";
 import { connectRoom } from "./utilities/connectRoom";
+import { EcctrlJoystick } from "ecctrl";
 
 export function App() {
     const [room,setRoom] = useState<Room | null>(null);

@@ -1,64 +1,39 @@
 {
-  "name": "ecctrl",
-  "version": "1.0.89",
-  "author": "Erdong Chen",
-  "license": "MIT",
-  "description": "A floating rigibody character controller for R3F",
-  "keywords": [
-    "react",
-    "three",
-    "threejs",
-    "react-three-fiber",
-    "control",
-    "character-control"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pmndrs/ecctrl.git"
-  },
-  "files": [
-    "dist/*",
-    "src/*"
-  ],
+  "name": "multiplayer-frontend",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "types": "./dist/Ecctrl.d.ts",
-  "main": "./dist/Ecctrl.cjs",
-  "module": "./dist/Ecctrl.js",
-  "exports": {
-    "types": "./dist/Ecctrl.d.ts",
-    "require": "./dist/Ecctrl.cjs",
-    "import": "./dist/Ecctrl.js"
-  },
-  "sideEffects": false,
-  "devDependencies": {
-    "@react-three/drei": "^9.92.7",
-    "@react-three/fiber": "^8.15.13",
-    "@types/node": "^22.5.1",
-    "@types/react": "^18.2.28",
-    "@types/react-dom": "^18.2.8",
-    "@vitejs/plugin-react": "^4.1.0",
-    "r3f-perf": "^7.1.2",
-    "typescript": "^5.4.3",
-    "vite": "^4.5.3"
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@react-spring/three": "^9.7.3",
-    "colyseus.js": "^0.15.26",
-    "ecctrl": "^1.0.89",
-    "leva": "^0.9.34",
-    "zustand": "^4.4.7"
-  },
-  "peerDependencies": {
     "@react-three/drei": ">=9.0",
     "@react-three/fiber": ">=8.0",
     "@react-three/rapier": ">=1.4.0",
+    "colyseus.js": "^0.15.26",
+    "ecctrl": "^1.0.89",
+    "leva": "^0.9.34",
+    "r3f-perf": "^7.2.1",
     "react": ">=18",
     "react-dom": ">=18.0",
-    "three": ">=0.153"
+    "three": ">=0.153",
+    "zustand": "^4.4.7"
   },
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build && tsc",
-    "preview": "vite preview"
+  "devDependencies": {
+    "@eslint/js": "^9.9.0",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^9.9.0",
+    "eslint-plugin-react-hooks": "^5.1.0-rc.0",
+    "eslint-plugin-react-refresh": "^0.4.9",
+    "globals": "^15.9.0",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.0.1",
+    "vite": "^5.4.1"
   }
 }
